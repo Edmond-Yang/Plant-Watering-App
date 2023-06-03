@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
 
             return Scaffold(
               appBar: AppBar(
-                title: Text('Plants', style: TextStyle(color: Colors.pink.shade800,),),
+                title: Text('狐尾武竹', style: TextStyle(color: Colors.pink.shade800,fontFamily: 'TaipeiSansTCBeta',),),
                 centerTitle: true,
                 backgroundColor: Colors.pink[100],
                 actions: [
