@@ -1,8 +1,10 @@
-# aiot_plants
+# Plant Watering
 
-A new Flutter project.
+A project by class Aiot.
 
-## Getting Started
+## introduction
+
+## demo
 
 This project is a starting point for a Flutter application.
 

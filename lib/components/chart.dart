@@ -13,6 +13,7 @@ class Chart extends StatelessWidget {
   Widget build(BuildContext context) {
 
     final Map info = Provider.of<Data>(context).getPlantsAndWeather();
+    final _tooltipBehavior = TooltipBehavior(enable: true);
 
     double w = MediaQuery.of(context).size.width*0.95;
 
@@ -22,7 +23,7 @@ class Chart extends StatelessWidget {
     waterWeight = [];
 
     for(var d in info['detail']['plant']){
-      int temp = ((4095-d['soil_moisture'])/4095*100).round();
+      int temp = ((1100-d['soil_moisture'])/(4095-1100)*100+100).round();
       temperature.add(ChartData(d['time'], d['temperature']));
       humidity.add(ChartData(d['time'], d['moisture']));
       soilMoisture.add(ChartData(d['time'], temp));
@@ -40,6 +41,7 @@ class Chart extends StatelessWidget {
             fontFamily: 'TaipeiSansTCBeta',
           )),
           enableAxisAnimation: true,
+          tooltipBehavior: _tooltipBehavior,
           primaryXAxis: CategoryAxis(
             autoScrollingDelta: 4,
             autoScrollingMode: AutoScrollingMode.end,
@@ -57,7 +59,8 @@ class Chart extends StatelessWidget {
                 yValueMapper: (ChartData data, _) => data.y,
                 isVisible: true,
                 color: Colors.red,
-                name: '溫度'
+                name: '溫度',
+                enableTooltip: true,
             ),
             LineSeries<ChartData, String>(
                 dataSource: humidity,
@@ -65,7 +68,8 @@ class Chart extends StatelessWidget {
                 yValueMapper: (ChartData data, _) => data.y,
                 isVisible: true,
                 color: Colors.blue,
-                name: '濕度'
+                name: '濕度',
+                enableTooltip: true,
             ),
             LineSeries<ChartData, String>(
                 dataSource: soilMoisture,
@@ -73,7 +77,8 @@ class Chart extends StatelessWidget {
                 yValueMapper: (ChartData data, _) => data.y,
                 isVisible: true,
                 color: Colors.brown,
-                name: '土壤濕度'
+                name: '土壤濕度',
+                enableTooltip: true,
             ),
             LineSeries<ChartData, String>(
                 dataSource: waterWeight,
@@ -81,7 +86,8 @@ class Chart extends StatelessWidget {
                 yValueMapper: (ChartData data, _) => data.y,
                 isVisible: true,
                 color: Colors.lightGreen,
-                name: '水重'
+                name: '水重',
+                enableTooltip: true,
             ),
           ],
         ),

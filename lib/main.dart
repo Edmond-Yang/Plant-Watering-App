@@ -16,9 +16,8 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       title: 'Plants',
-      theme: ThemeData(
-
-      ),
+      theme: ThemeData(),
+      debugShowCheckedModeBanner: false,
       home: ChangeNotifierProvider(
         create: (context) => Data(),
         child: Consumer<Data>(
