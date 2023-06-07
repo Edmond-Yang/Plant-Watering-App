@@ -86,7 +86,7 @@ class Chart extends StatelessWidget {
                 yValueMapper: (ChartData data, _) => data.y,
                 isVisible: true,
                 color: Colors.lightGreen,
-                name: '水重',
+                name: '溢出水重',
                 enableTooltip: true,
             ),
           ],
