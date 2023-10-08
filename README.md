@@ -1,18 +1,21 @@
 # Plant Watering
 
-A project by class Aiot.
+## 介紹
+* 物聯網期末專題
+* 利用此手機應用程式來關注植物及環境資訊
+* 植物及環境資訊每半小時進行監測
 
-## introduction
+## 應用程式
 
-## demo
+* 最上層：重新整理資料
+* 上層：植物環境資訊(保留最近十筆，可以左右滑動查看)
+* 中層：最近三次澆水紀錄
+* 下層：最近天氣狀況，視降雨機率提醒使用者是否該收進來避雨或拿出去曬太陽
 
-This project is a starting point for a Flutter application.
+![](./README_IMG/Picture1.png)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 貢獻
+* [楊世宇](https://github.com/Edmond-Yang)
+* [楊峻豪](https://github.com/daaaaaaavid)
+* [林庭毅](https://github.com/TingYeeet)
+* [陳建維](https://github.com/TamakiSilSha)
